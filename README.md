@@ -1,17 +1,9 @@
-## Personal Portoflio
+## Gridsome Buefy Starter
 
-Created in gridsome used to showcase my projects and to stop having issues updating hugo academic.
+When I was trying to transition my personal website from hugo to gridsome, I noticed a lack of starter templates that use `buefy`, an amazing open source UI framework.
 
+I have created a fairly basic repo to get started with buefy.
 
-I have added extra folders called `project` and `util` to store local markdown files and for data processing.
+### Contact Me
 
-### 1. Install Gridsome CLI tool if you don't have
-
-`npm install --global @gridsome/cli`
-
-### 2. Create a Gridsome project
-
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+Please feel free to make any issues or pull requests if any issues arise.

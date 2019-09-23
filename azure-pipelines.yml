@@ -22,10 +22,8 @@ steps:
   
 - script: |
     npm install
-    npm install -g @gridsome/cli
-    gridsome build
-    ls
-  displayName: 'npm install'
+    npx gridsome build
+  displayName: 'Gridsome Build'
 
 - script: |
     rm -rf .git
@@ -37,7 +35,7 @@ steps:
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
     git remote add origin https://$(USERNAME):$(GITHUB_TOKEN)@github.com/$(Build.Repository.Name).git
     git push origin HEAD:refs/heads/gh-pages --force
-  displayName: 'Publish GitHub Pages'
+  displayName: 'Deploy to GitHub Pages'
   condition: |
     and(not(eq(variables['Build.Reason'], 'PullRequest')),
         eq(variables['Build.SourceBranch'], 'refs/heads/master'))
