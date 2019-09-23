@@ -1,0 +1,43 @@
+# Node.js with Vue
+# Build a Node.js project that uses Vue.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  - group: Credentials
+  - name: USERNAME
+    value: FriendlyUser
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+  
+- script: |
+    npm install
+    npm install -g @gridsome/cli
+    gridsome build
+    ls
+  displayName: 'npm install'
+
+- script: |
+    rm -rf .git
+    cd dist
+    git init
+    git config --local user.name "Azure Pipelines"
+    git config --local user.email "azuredevops@microsoft.com"
+    git add .
+    git commit -m "Publishing GitHub Pages  ***NO_CI***"
+    git remote add origin https://$(USERNAME):$(GITHUB_TOKEN)@github.com/$(Build.Repository.Name).git
+    git push origin HEAD:refs/heads/gh-pages --force
+  displayName: 'Publish GitHub Pages'
+  condition: |
+    and(not(eq(variables['Build.Reason'], 'PullRequest')),
+        eq(variables['Build.SourceBranch'], 'refs/heads/master'))

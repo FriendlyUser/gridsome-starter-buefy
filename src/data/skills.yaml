@@ -1,0 +1,69 @@
+vue:
+  name: Vue
+  icon: vuejs
+  pack: mdi
+  stars: 3 # out of 5
+  description: I love vue
+  # Colors for tags and icons, confusing I know
+  tagType: is-primary
+  iconType: is-info
+
+react:
+  name: React
+  icon: react
+  pack: mdi
+  stars: 4 # out of 5
+  description: I love vue
+
+node:
+  name: Nodejs
+  icon: nodejs
+  pack: mdi
+  stars: 4 # out of 5
+  description: I love vue
+
+webpack:
+  name: Webpack
+  icon: webpack
+  pack: mdi
+  stars: 3 # out of 5
+  description: Use this all the time
+
+golang:
+  name: golang
+  icon: linux
+  pack: mdi
+  stars: 3 # out of 5
+  description: Use this all the time
+
+# fix yourself in the next iteration
+java:
+  name: Java
+  icon: language-javascript
+  pack: mdi
+  stars: 2 # out of 5
+  description: Coursework and side projects
+
+php:
+  name: PHP
+  icon: language-php
+  stars: 2 # out of 5
+  description: Used laravel at work
+
+html5:
+  name: HTML5
+  icon: language-html5
+  stars: 2 # out of 5
+  description: Coursework and side projects
+
+Typescript:
+  name: TypeScript
+  icon: language-typescript
+  stars: 2 # out of 5
+  description: Coursework and side projects
+
+Bash:
+  name: bash
+  icon: bash
+  stars: 2 # out of 5
+  description: Coursework and side projects
