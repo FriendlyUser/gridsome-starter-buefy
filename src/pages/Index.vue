@@ -21,7 +21,7 @@
     <b-step-item label="Installation" icon="npm">
       <ul>
         <li> Install gridsome by running <i> npm install -g gridsome </i> </li>
-        <li> Then clone this repo by running <i> git clone TODO ADD REPO NAME</i> </li>
+        <li> Then clone this repo by running <i> git clone https://github.com/FriendlyUser/gridsome-starter-buefy.git</i> </li>
       </ul>
     </b-step-item>
     <b-step-item label="Configuration" icon="web">
