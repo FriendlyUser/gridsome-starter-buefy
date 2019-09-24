@@ -13,10 +13,6 @@
   <div class="container">
   <b-steps
      v-model="activeStep"
-    :animated="isAnimated"
-    :has-navigation="hasNavigation"
-    :icon-prev="prevIcon"
-    :icon-next="nextIcon"
   >
     <b-step-item label="Installation" icon="npm">
       <ul>
