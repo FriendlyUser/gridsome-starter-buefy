@@ -26,8 +26,16 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'blog/**/*.md',
-        typeName: 'Post',
-        route: '/blog/:slug'
+        typeName: 'BlogPost',
+        route: '/blog/:slug',
+        refs: {
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+              typeName: 'Tag',
+              route: '/tag/:id',
+              create: true
+          }
+        }
       }
     }
   ],
@@ -44,10 +52,5 @@ module.exports = {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
 
-    config.module
-      .rule('pug')
-      .test(/\.pug$/)
-      .use('pug-plain-loader')
-      .loader('pug-plain-loader')
   }
 }

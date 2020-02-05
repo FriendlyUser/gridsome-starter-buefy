@@ -6,16 +6,16 @@
   </Layout>
 </template>
 
-
 <page-query>
-query Post ($path: String!) {
-  post: post (path: $path) {
+query blogPost ($path: String!) {
+  post: blogPost (path: $path) {
     title
+    path
+    timeToRead
     content
   }
 }
 </page-query>
-
 
 <script>
 export default {
