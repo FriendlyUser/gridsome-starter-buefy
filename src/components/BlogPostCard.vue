@@ -5,7 +5,7 @@
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
-      <p class="post-card__description" v-html="post.description" />
+      <p class="post-card__description" v-html="this.excerpt" />
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
   </div>
@@ -15,9 +15,18 @@
 // import PostMeta from '~/components/PostMeta'
 // import PostTags from '~/components/PostTags'
 export default {
+  data() {
+    return {
+      excerpt: this.generateExcerpt(this.post.content, 290)
+    }
+  },
+  methods: {
+    generateExcerpt: function(textToStrip, length) {
+      // let regex = /(<([^>]+)>)/gi
+      return textToStrip.slice(0,length)
+    }
+  },
   created() {
-    console.log(this.post)
-    console.log(this.post.coverImage)
   },
   components: {
     // PostMeta,

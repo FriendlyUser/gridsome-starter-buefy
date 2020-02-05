@@ -20,6 +20,8 @@ query {
         path
         image
         excerpt
+        description
+        content
       }
     }
   }
@@ -30,6 +32,10 @@ query {
 // maps to /blog
 import BlogPostCard from '~/components/BlogPostCard.vue'
 export default {
+  data() {
+    console.log(this)
+    return {}
+  },
   components: {
     // Author,
     BlogPostCard

@@ -39,6 +39,14 @@ module.exports = {
       }
     }
   ],
+  transformers: {
+    remark: {
+      // global remark options
+      grayMatter: {
+        excerpt: true
+      }
+    }
+  },
   chainWebpack: config => {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

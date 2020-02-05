@@ -8,9 +8,16 @@ module.exports = function (api) {
   api.chainWebpack((config, { isServer }) => {
   })
 
-  api.loadSource( async store => {
-  
-  })
+  // api.loadSource(({ addSchemaResolvers }) => {
+  //   addSchemaResolvers({
+  //     BlogPost: {
+  //       excerpt(obj) {
+  //         var longText = (obj.excerpt.length > 200) ? '...' : '';
+  //         return obj.excerpt.replace(/^(.{200}[^\s]*).*/, "$1"+longText);
+  //       }
+  //     }
+  //   })
+  // })
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api
