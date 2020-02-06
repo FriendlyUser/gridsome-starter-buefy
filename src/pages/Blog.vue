@@ -2,10 +2,14 @@
   <Layout :show-logo="false">
 
     <!-- List posts -->
-    <div class="posts">
-      <BlogPostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+    <div class="container">
+      <div class="columns">
+        <div class ="column is-third" v-for="edge in $page.posts.edges" :key="edge.node.id">
+          <!-- content -->
+          <BlogPostCard :key="edge.node.id" :post="edge.node"/>
+        </div>
+      </div>
     </div>
-
   </Layout>
 </template>
 

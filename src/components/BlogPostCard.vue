@@ -1,12 +1,26 @@
 <template>
-  <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
-    <div class="post-card__header">
-      <g-image alt="Cover image" v-if="post.coverImage" class="post-card__image" :src="post.coverImage" />
+  <div class="card">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <g-image v-if="post.image" :src="post.image" alt="Placeholder image" />
+      </figure>
     </div>
-    <div class="post-card__content">
-      <h2 class="post-card__title" v-html="post.title" />
-      <p class="post-card__description" v-html="this.excerpt" />
-      <g-link class="post-card__link" :to="post.path">Link</g-link>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <g-image v-if="post.image" :src="post.image" alt="Placeholder image" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">{{post.title}}</p>
+          <p class="subtitle is-6">{{post.title}}</p>
+        </div>
+      </div>
+      <div class="content" v-html="this.excerpt" />
+      <g-link :href="post.path" :to="post.path">Link</g-link>
+      <br />
+      <time datetime="2016-1-1">{{post.date}}</time>
     </div>
   </div>
 </template>
