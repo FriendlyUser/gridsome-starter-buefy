@@ -82,6 +82,11 @@
 import Skills from '~/components/Skills'
 import Layout from '~/layouts/Default.vue'
 export default {
+  data() {
+    return {
+      activeStep: 0,
+    }
+  },
   components: {
     Layout,
     Skills

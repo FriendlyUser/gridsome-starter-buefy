@@ -18,7 +18,7 @@
         Home
       </a>
 
-      <a class="navbar-item" href="/blog/first-post">
+      <a class="navbar-item" href="/blog">
         Blog
       </a>
 
