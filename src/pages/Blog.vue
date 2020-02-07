@@ -1,11 +1,13 @@
 <template>
   <Layout :show-logo="false">
-
+    <br />
     <!-- List posts -->
     <div class="container">
-      <div class="columns">
-        <div class ="column is-third" v-for="edge in $page.posts.edges" :key="edge.node.id">
-          <!-- content -->
+      <h4 class="subtitle is-3">Latest Blog Posts</h4>
+      <br />
+      <div class="columns is-multiline">
+        <!-- content -->
+        <div class="column is-one-third" v-for="edge in $page.posts.edges" :key="edge.node.id">
           <BlogPostCard :key="edge.node.id" :post="edge.node"/>
         </div>
       </div>
@@ -15,7 +17,7 @@
 
 <page-query>
 query {
-  posts: allBlogPost {
+  posts: allBlogPost(limit: 12) {
     edges {
       node {
         id
@@ -37,7 +39,6 @@ query {
 import BlogPostCard from '~/components/BlogPostCard.vue'
 export default {
   data() {
-    console.log(this)
     return {}
   },
   components: {

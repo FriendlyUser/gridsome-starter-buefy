@@ -3,24 +3,28 @@ vue:
   icon: vuejs
   pack: mdi
   stars: 3 # out of 5
-  description: I love vue
+  description: Use vue for open source
   # Colors for tags and icons, confusing I know
-  tagType: is-primary
-  iconType: is-info
+  tagType: is-info
+  iconType: is-success
 
 react:
   name: React
   icon: react
   pack: mdi
   stars: 4 # out of 5
-  description: I love vue
+  description: Use React during work
+  tagType: is-primary
+  iconType: is-warning
 
 node:
   name: Nodejs
   icon: nodejs
   pack: mdi
   stars: 4 # out of 5
-  description: I love vue
+  description: Constantly use node
+  tagType: is-black
+  iconType: is-info
 
 webpack:
   name: Webpack
@@ -28,42 +32,57 @@ webpack:
   pack: mdi
   stars: 3 # out of 5
   description: Use this all the time
+  tagType: is-primary
+  iconType: is-info
 
 golang:
   name: golang
-  icon: linux
+  icon: language-go
   pack: mdi
   stars: 3 # out of 5
   description: Use this all the time
+  tagType: is-light
+  iconType: is-black
 
 # fix yourself in the next iteration
-java:
-  name: Java
-  icon: language-javascript
+python:
+  name: Python
+  icon: language-python
   pack: mdi
   stars: 2 # out of 5
-  description: Coursework and side projects
+  description: >
+   Used for machine learning 
+  tagType: is-info
+  iconType: is-dark
 
 php:
   name: PHP
   icon: language-php
   stars: 2 # out of 5
   description: Used laravel at work
+  tagType: is-light
+  iconType: is-primary
 
 html5:
   name: HTML5
   icon: language-html5
-  stars: 2 # out of 5
+  stars: 4 # out of 5
   description: Coursework and side projects
+  tagType: is-warning
+  iconType: is-danger
 
 Typescript:
   name: TypeScript
   icon: language-typescript
   stars: 2 # out of 5
   description: Coursework and side projects
+  tagType: is-black
+  iconType: is-info
 
 Bash:
   name: bash
-  icon: bash
+  icon: linux
   stars: 2 # out of 5
   description: Coursework and side projects
+  tagType: is-danger
+  iconType: is-dar

@@ -4,7 +4,7 @@
   <h2 class="subtitle">List is not comprehensive</h2>
   <div class="columns is-multiline">
     <div class="column is-narrow" v-for="skill in skills" v-bind:key="skill.name">
-      <div class="card">
+      <div class="card skill-card">
         <header class="card-header">
           <p class="card-header-title">
             <b-taglist attached class="is-large">
@@ -48,3 +48,11 @@ export default {
   }
 }
 </script>
+
+<style>
+.skill-card {
+  width: 250px;
+  height: 225px;
+  margin: auto;
+}
+</style>

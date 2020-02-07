@@ -1,8 +1,22 @@
 <template>
   <Layout>
-
-    <h1 class="title">{{$page.post.title}}</h1>
-    <div v-html="$page.post.content" />
+    <div class="container">
+        <div class="level">
+            <div class="level-left">
+                <strong>Time To Read:</strong> &nbsp;
+                <span> {{$page.post.timeToRead}} minute</span>
+            </div>
+            <div class="level-right">
+                <h1 class="title is-3">{{$page.post.title}}</h1>
+            </div>
+        </div>
+        <g-image
+            v-if="$page.post.image" 
+            :src="$page.post.image" alt="Placeholder image" 
+            width="100%" fit="fill"
+        />
+        <div v-html="$page.post.content" />
+    </div>
   </Layout>
 </template>
 
@@ -13,6 +27,7 @@ query blogPost ($path: String!) {
     path
     timeToRead
     content
+    image
   }
 }
 </page-query>
