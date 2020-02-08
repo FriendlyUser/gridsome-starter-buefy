@@ -14,9 +14,7 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="/">
-        Home
-      </a>
+      <g-link to="/" class="navbar-item">Home</g-link>
       <g-link to="/blog/" class="navbar-item">Blog</g-link>
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
