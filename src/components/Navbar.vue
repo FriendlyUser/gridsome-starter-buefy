@@ -17,11 +17,7 @@
       <a class="navbar-item" href="/">
         Home
       </a>
-
-      <a class="navbar-item" href="/blog">
-        Blog
-      </a>
-
+      <g-link to="/blog/" class="navbar-item">Blog</g-link>
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More
