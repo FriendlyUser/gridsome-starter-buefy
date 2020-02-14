@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="content" v-html="this.excerpt" />
-      <g-link :href="post.path" :to="post.path">Link</g-link>
+      <g-link :to="post.path">Link</g-link>
       <br />
       <time datetime="2016-1-1">{{post.date}}</time>
     </div>
@@ -28,8 +28,6 @@
 </template>
 
 <script>
-// import PostMeta from '~/components/PostMeta'
-// import PostTags from '~/components/PostTags'
 export default {
   data() {
     return {
@@ -38,6 +36,7 @@ export default {
   },
   methods: {
     generateExcerpt: function(textToStrip, length) {
+      // remove tags
       // let regex = /(<([^>]+)>)/gi
       return textToStrip.slice(0,length)
     }
@@ -45,8 +44,6 @@ export default {
   created() {
   },
   components: {
-    // PostMeta,
-    // PostTags
   },
   props: ['post'],
 }
