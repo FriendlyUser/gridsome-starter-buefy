@@ -27,7 +27,7 @@ module.exports = {
       options: {
         path: 'blog/**/*.md',
         typeName: 'BlogPost',
-        route: '/blog/:slug',
+        route: '/:slug',
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
