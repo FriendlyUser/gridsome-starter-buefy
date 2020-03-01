@@ -15,7 +15,7 @@
             :src="$page.post.image" alt="Placeholder image" 
             width="100%" fit="fill"
         />
-        <div v-html="$page.post.content" />
+        <div id="content" v-html="$page.post.content" />
     </div>
   </Layout>
 </template>
@@ -32,6 +32,12 @@ query blogPost ($path: String!) {
 }
 </page-query>
 
+
+<style>
+#content .img {
+  max-width: 50%;
+}
+</style>
 <script>
 export default {
   metaInfo () {
