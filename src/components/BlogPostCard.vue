@@ -2,9 +2,9 @@
   <div class="card">
     <div class="card-image">
       <figure class="image is-4by3 image-container">
-        <a :href="post.path">
+        <g-link :to="post.path">
           <g-image v-if="post.image" :src="post.image" alt="Placeholder image" />
-        </a>
+        </g-link>
       </figure>
     </div>
     <div class="card-content">
