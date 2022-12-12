@@ -20,7 +20,7 @@ function addStyleResource (rule) {
 module.exports = {
   siteName: 'Sample Gridsome Buefy Site',
   siteUrl: 'https://friendlyuser.github.io',
-  pathPrefix: '/gridsome-starter-buefy/',
+  pathPrefix: '/',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
